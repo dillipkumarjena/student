@@ -1,15 +1,15 @@
 package com.sg.controller;
 
 import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
+
 import com.sg.entity.Marks;
 import com.sg.entity.Student;
 import com.sg.service.StudentService;
@@ -19,14 +19,6 @@ public class StudentController {
 
 	@Autowired
 	private StudentService studentService;
-
-	@GetMapping("/")
-	public ModelAndView studentForm() {
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("student_form");
-		return mav;
-
-	}
 
 	@PostMapping("/createStudent")
 	public ResponseEntity<Student> createStudent(@Valid @RequestBody Student student) {
