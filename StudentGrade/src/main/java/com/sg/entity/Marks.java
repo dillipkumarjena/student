@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class Marks implements Serializable{
 	private static final long serialVersionUID = -7587766302576053690L;
 
